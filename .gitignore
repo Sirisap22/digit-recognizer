@@ -3,6 +3,6 @@
 **/.vscode/
 **/__pycache__/
 **/svm_digit_recognizer_proba.pkl
-
 .DS_Store
 .env
+**/.env

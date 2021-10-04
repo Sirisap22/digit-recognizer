@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import axios from 'axios';
+  import { predictionPercentage, toggleGraph } from './store/stores.ts';
+
   let canvas;
   let clearBtn;
   let predictBtn;
@@ -89,6 +90,9 @@
       ctx.fillStyle = 'black';
       ctx.fillRect(0, 0, width, height);
       ctx.fillStyle = 'white';
+
+      predictionPercentage.set({});
+      toggleGraph.set(false);
     }
 
     predictBtn.addEventListener('click', function(e) {
@@ -113,11 +117,13 @@
             }
           }
 
-          console.log(predictions)
+          predictionPercentage.update(value => predictions);
+          toggleGraph.set(true);
         })
       })
     }
   })
+
 
 
 </script>
