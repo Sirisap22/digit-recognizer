@@ -152,10 +152,14 @@
 </script>
 
 <main>
-  <h1>Canvas</h1>
-  <canvas bind:this={canvas} width="400" height="400" />
+<div>
+<h1>Canvas</h1>
+<canvas bind:this={canvas} width="400" height="400" />
+<div>
+<div>
   <button bind:this={clearBtn}>clear</button>
   <button bind:this={predictBtn}>predict</button>
+<div>
 </main>
 
 <style>
