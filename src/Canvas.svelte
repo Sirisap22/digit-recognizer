@@ -153,6 +153,9 @@
   })
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Patrick+Hand&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <main >
 <body id="pagePrediction">
 <div id="tabbar">
@@ -195,7 +198,7 @@ background: #B1C319;
 #handWrite{
 text-align: center;
 position: relative;
-font-family: Roboto;
+font-family: 'IM Fell English SC', serif;
 font-style: normal;
 font-weight: normal;
 line-height: 75px;
@@ -247,11 +250,11 @@ font-weight: bold;
 
 #predictionResult{
 position:absolute;
-width: 380px;
+width: 800px;
 height: 60px;
-left: 60%;
+left: 45%;
 top: 250%;
-font-family: Roboto;
+font-family: 'IM Fell English SC', serif;
 font-style: normal;
 font-weight: bold;
 font-size: 48px;
@@ -261,10 +264,10 @@ color: #FFFFFF;
 }
 #accuracy{
 position: absolute;
-left: 63%;
+left: 64.5%;
 top: 600%;
 font-display:inherit;
-font-family: Roboto;
+font-family: 'Patrick Hand', cursive;
 font-style: normal;
 font-weight: normal;
 font-size: 36px;

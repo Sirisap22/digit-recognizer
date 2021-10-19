@@ -473,158 +473,191 @@ var app = (function () {
     const file$3 = "src\\Canvas.svelte";
 
     function create_fragment$3(ctx) {
-    	let link;
+    	let link0;
     	let t0;
+    	let link1;
+    	let t1;
+    	let link2;
+    	let t2;
+    	let link3;
+    	let t3;
     	let main;
     	let body;
     	let div2;
     	let div0;
     	let h10;
-    	let t2;
+    	let t5;
     	let h11;
     	let p0;
-    	let t4;
-    	let p1;
-    	let t6;
-    	let p2;
     	let t7;
+    	let p1;
+    	let t9;
+    	let p2;
+    	let t10;
     	let p3;
-    	let t8;
+    	let t11;
     	let p4;
 
-    	let t9_value = (/*$predictionPercentage*/ ctx[0][/*predictedAnswer*/ ctx[4]]
+    	let t12_value = (/*$predictionPercentage*/ ctx[0][/*predictedAnswer*/ ctx[4]]
     	? `Accuracy: ${/*$predictionPercentage*/ ctx[0][/*predictedAnswer*/ ctx[4]]}%`
     	: '') + "";
 
-    	let t9;
-    	let t10;
+    	let t12;
+    	let t13;
     	let canvas_1;
-    	let t11;
+    	let t14;
     	let div1;
     	let button0;
-    	let t13;
+    	let t16;
     	let button1;
 
     	const block = {
     		c: function create() {
-    			link = element("link");
+    			link0 = element("link");
     			t0 = space();
+    			link1 = element("link");
+    			t1 = space();
+    			link2 = element("link");
+    			t2 = space();
+    			link3 = element("link");
+    			t3 = space();
     			main = element("main");
     			body = element("body");
     			div2 = element("div");
     			div0 = element("div");
     			h10 = element("h1");
     			h10.textContent = "Handwritten Digit Recognition Web App";
-    			t2 = space();
+    			t5 = space();
     			h11 = element("h1");
     			p0 = element("p");
     			p0.textContent = "Write your number!";
-    			t4 = space();
+    			t7 = space();
     			p1 = element("p");
     			p1.textContent = "Prediction Result";
-    			t6 = space();
+    			t9 = space();
     			p2 = element("p");
-    			t7 = space();
-    			p3 = element("p");
-    			t8 = space();
-    			p4 = element("p");
-    			t9 = text(t9_value);
     			t10 = space();
-    			canvas_1 = element("canvas");
+    			p3 = element("p");
     			t11 = space();
+    			p4 = element("p");
+    			t12 = text(t12_value);
+    			t13 = space();
+    			canvas_1 = element("canvas");
+    			t14 = space();
     			div1 = element("div");
     			button0 = element("button");
     			button0.textContent = "Clear";
-    			t13 = space();
+    			t16 = space();
     			button1 = element("button");
     			button1.textContent = "Predict";
-    			attr_dev(link, "href", "https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap");
-    			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$3, 112, 0, 3620);
+    			attr_dev(link0, "href", "https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap");
+    			attr_dev(link0, "rel", "stylesheet");
+    			add_location(link0, file$3, 112, 0, 3620);
+    			attr_dev(link1, "href", "https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
+    			attr_dev(link1, "rel", "stylesheet");
+    			add_location(link1, file$3, 113, 0, 3742);
+    			attr_dev(link2, "href", "https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Playfair+Display:wght@900&display=swap");
+    			attr_dev(link2, "rel", "stylesheet");
+    			add_location(link2, file$3, 114, 0, 3846);
+    			attr_dev(link3, "href", "https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Patrick+Hand&family=Playfair+Display:wght@900&display=swap");
+    			attr_dev(link3, "rel", "stylesheet");
+    			add_location(link3, file$3, 115, 0, 3983);
     			attr_dev(h10, "id", "handWrite");
-    			attr_dev(h10, "class", "svelte-1soxh5a");
-    			add_location(h10, file$3, 117, 0, 3801);
+    			attr_dev(h10, "class", "svelte-1suojzx");
+    			add_location(h10, file$3, 120, 0, 4199);
     			attr_dev(p0, "id", "writenum");
-    			attr_dev(p0, "class", "svelte-1soxh5a");
-    			add_location(p0, file$3, 118, 4, 3867);
-    			add_location(h11, file$3, 118, 0, 3863);
+    			attr_dev(p0, "class", "svelte-1suojzx");
+    			add_location(p0, file$3, 121, 4, 4265);
+    			add_location(h11, file$3, 121, 0, 4261);
     			attr_dev(p1, "id", "predictionResult");
-    			attr_dev(p1, "class", "svelte-1soxh5a");
-    			add_location(p1, file$3, 119, 0, 3912);
+    			attr_dev(p1, "class", "svelte-1suojzx");
+    			add_location(p1, file$3, 122, 0, 4310);
     			attr_dev(p2, "id", "arrowbody");
-    			attr_dev(p2, "class", "svelte-1soxh5a");
-    			add_location(p2, file$3, 120, 0, 3959);
+    			attr_dev(p2, "class", "svelte-1suojzx");
+    			add_location(p2, file$3, 123, 0, 4357);
     			attr_dev(p3, "id", "triangle");
-    			attr_dev(p3, "class", "svelte-1soxh5a");
-    			add_location(p3, file$3, 121, 0, 3982);
+    			attr_dev(p3, "class", "svelte-1suojzx");
+    			add_location(p3, file$3, 124, 0, 4380);
     			attr_dev(p4, "id", "accuracy");
-    			attr_dev(p4, "class", "svelte-1soxh5a");
-    			add_location(p4, file$3, 122, 0, 4004);
+    			attr_dev(p4, "class", "svelte-1suojzx");
+    			add_location(p4, file$3, 125, 0, 4402);
     			attr_dev(canvas_1, "width", "500");
     			attr_dev(canvas_1, "height", "400");
     			attr_dev(canvas_1, "id", "canvasW");
-    			attr_dev(canvas_1, "class", "svelte-1soxh5a");
-    			add_location(canvas_1, file$3, 124, 0, 4128);
-    			add_location(div0, file$3, 116, 0, 3795);
+    			attr_dev(canvas_1, "class", "svelte-1suojzx");
+    			add_location(canvas_1, file$3, 127, 0, 4526);
+    			add_location(div0, file$3, 119, 0, 4193);
     			attr_dev(button0, "id", "ButtonClear");
-    			attr_dev(button0, "class", "svelte-1soxh5a");
-    			add_location(button0, file$3, 127, 2, 4212);
+    			attr_dev(button0, "class", "svelte-1suojzx");
+    			add_location(button0, file$3, 130, 2, 4610);
     			attr_dev(button1, "id", "ButtonPredict");
-    			attr_dev(button1, "class", "svelte-1soxh5a");
-    			add_location(button1, file$3, 128, 2, 4275);
-    			add_location(div1, file$3, 126, 0, 4202);
+    			attr_dev(button1, "class", "svelte-1suojzx");
+    			add_location(button1, file$3, 131, 2, 4673);
+    			add_location(div1, file$3, 129, 0, 4600);
     			attr_dev(div2, "id", "tabbar");
-    			attr_dev(div2, "class", "svelte-1soxh5a");
-    			add_location(div2, file$3, 115, 0, 3777);
+    			attr_dev(div2, "class", "svelte-1suojzx");
+    			add_location(div2, file$3, 118, 0, 4175);
     			attr_dev(body, "id", "pagePrediction");
-    			attr_dev(body, "class", "svelte-1soxh5a");
-    			add_location(body, file$3, 114, 0, 3750);
-    			add_location(main, file$3, 113, 0, 3742);
+    			attr_dev(body, "class", "svelte-1suojzx");
+    			add_location(body, file$3, 117, 0, 4148);
+    			add_location(main, file$3, 116, 0, 4140);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, link, anchor);
+    			insert_dev(target, link0, anchor);
     			insert_dev(target, t0, anchor);
+    			insert_dev(target, link1, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, link2, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, link3, anchor);
+    			insert_dev(target, t3, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, body);
     			append_dev(body, div2);
     			append_dev(div2, div0);
     			append_dev(div0, h10);
-    			append_dev(div0, t2);
+    			append_dev(div0, t5);
     			append_dev(div0, h11);
     			append_dev(h11, p0);
-    			append_dev(div0, t4);
-    			append_dev(div0, p1);
-    			append_dev(div0, t6);
-    			append_dev(div0, p2);
     			append_dev(div0, t7);
-    			append_dev(div0, p3);
-    			append_dev(div0, t8);
-    			append_dev(div0, p4);
-    			append_dev(p4, t9);
+    			append_dev(div0, p1);
+    			append_dev(div0, t9);
+    			append_dev(div0, p2);
     			append_dev(div0, t10);
+    			append_dev(div0, p3);
+    			append_dev(div0, t11);
+    			append_dev(div0, p4);
+    			append_dev(p4, t12);
+    			append_dev(div0, t13);
     			append_dev(div0, canvas_1);
     			/*canvas_1_binding*/ ctx[5](canvas_1);
-    			append_dev(div2, t11);
+    			append_dev(div2, t14);
     			append_dev(div2, div1);
     			append_dev(div1, button0);
     			/*button0_binding*/ ctx[6](button0);
-    			append_dev(div1, t13);
+    			append_dev(div1, t16);
     			append_dev(div1, button1);
     			/*button1_binding*/ ctx[7](button1);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*$predictionPercentage, predictedAnswer*/ 17 && t9_value !== (t9_value = (/*$predictionPercentage*/ ctx[0][/*predictedAnswer*/ ctx[4]]
+    			if (dirty & /*$predictionPercentage, predictedAnswer*/ 17 && t12_value !== (t12_value = (/*$predictionPercentage*/ ctx[0][/*predictedAnswer*/ ctx[4]]
     			? `Accuracy: ${/*$predictionPercentage*/ ctx[0][/*predictedAnswer*/ ctx[4]]}%`
-    			: '') + "")) set_data_dev(t9, t9_value);
+    			: '') + "")) set_data_dev(t12, t12_value);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(link);
+    			if (detaching) detach_dev(link0);
     			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(link1);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(link2);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(link3);
+    			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(main);
     			/*canvas_1_binding*/ ctx[5](null);
     			/*button0_binding*/ ctx[6](null);
@@ -934,14 +967,14 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(th, "scope", "row");
-    			attr_dev(th, "class", "svelte-1l90fxy");
+    			attr_dev(th, "class", "svelte-1cpqrc5");
     			add_location(th, file$2, 15, 10, 476);
-    			attr_dev(span, "class", "svelte-1l90fxy");
+    			attr_dev(span, "class", "svelte-1cpqrc5");
     			add_location(span, file$2, 17, 12, 533);
-    			attr_dev(td, "class", "svelte-1l90fxy");
+    			attr_dev(td, "class", "svelte-1cpqrc5");
     			add_location(td, file$2, 16, 10, 516);
     			set_style(tr, "height", /*percentage*/ ctx[2] + "%");
-    			attr_dev(tr, "class", "svelte-1l90fxy");
+    			attr_dev(tr, "class", "svelte-1cpqrc5");
     			add_location(tr, file$2, 14, 8, 432);
     		},
     		m: function mount(target, anchor) {
@@ -1029,30 +1062,30 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "Back";
     			attr_dev(caption, "id", "colorfont");
-    			attr_dev(caption, "class", "svelte-1l90fxy");
+    			attr_dev(caption, "class", "svelte-1cpqrc5");
     			add_location(caption, file$2, 5, 4, 124);
     			attr_dev(th0, "scope", "col");
-    			attr_dev(th0, "class", "svelte-1l90fxy");
+    			attr_dev(th0, "class", "svelte-1cpqrc5");
     			add_location(th0, file$2, 8, 8, 218);
     			attr_dev(th1, "scope", "col");
-    			attr_dev(th1, "class", "svelte-1l90fxy");
+    			attr_dev(th1, "class", "svelte-1cpqrc5");
     			add_location(th1, file$2, 9, 8, 252);
-    			attr_dev(tr, "class", "svelte-1l90fxy");
+    			attr_dev(tr, "class", "svelte-1cpqrc5");
     			add_location(tr, file$2, 7, 6, 205);
-    			attr_dev(thead, "class", "svelte-1l90fxy");
+    			attr_dev(thead, "class", "svelte-1cpqrc5");
     			add_location(thead, file$2, 6, 4, 191);
-    			attr_dev(tbody, "class", "horizontal svelte-1l90fxy");
+    			attr_dev(tbody, "class", "horizontal svelte-1cpqrc5");
     			attr_dev(tbody, "id", "pageG");
     			add_location(tbody, file$2, 12, 4, 310);
-    			attr_dev(table, "class", "graph svelte-1l90fxy");
+    			attr_dev(table, "class", "graph svelte-1cpqrc5");
     			add_location(table, file$2, 4, 2, 97);
     			attr_dev(h1, "id", "font");
-    			attr_dev(h1, "class", "svelte-1l90fxy");
+    			attr_dev(h1, "class", "svelte-1cpqrc5");
     			add_location(h1, file$2, 23, 59, 686);
     			attr_dev(a, "href", "http://localhost:5000/");
     			add_location(a, file$2, 23, 26, 653);
     			attr_dev(button, "id", "backButton");
-    			attr_dev(button, "class", "svelte-1l90fxy");
+    			attr_dev(button, "class", "svelte-1cpqrc5");
     			add_location(button, file$2, 23, 2, 629);
     			add_location(main, file$2, 3, 0, 88);
     		},
@@ -1165,44 +1198,53 @@ var app = (function () {
     const file$1 = "src\\PredictedDigit.svelte";
 
     function create_fragment$1(ctx) {
+    	let link;
+    	let t0;
     	let main;
     	let div;
     	let h1;
-    	let t0;
     	let t1;
+    	let t2;
     	let button;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
+    			link = element("link");
+    			t0 = space();
     			main = element("main");
     			div = element("div");
     			h1 = element("h1");
-    			t0 = text(/*predictedAnswer*/ ctx[0]);
-    			t1 = space();
+    			t1 = text(/*predictedAnswer*/ ctx[0]);
+    			t2 = space();
     			button = element("button");
     			button.textContent = "Graph";
+    			attr_dev(link, "href", "https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Patrick+Hand&family=Playfair+Display:wght@900&display=swap");
+    			attr_dev(link, "rel", "stylesheet");
+    			add_location(link, file$1, 7, 0, 342);
     			attr_dev(h1, "id", "predictProduct");
-    			attr_dev(h1, "class", "svelte-3vgab1");
-    			add_location(h1, file$1, 10, 2, 369);
+    			attr_dev(h1, "class", "svelte-1ffw374");
+    			add_location(h1, file$1, 10, 2, 525);
     			attr_dev(div, "id", "box");
-    			attr_dev(div, "class", "svelte-3vgab1");
-    			add_location(div, file$1, 9, 2, 352);
+    			attr_dev(div, "class", "svelte-1ffw374");
+    			add_location(div, file$1, 9, 2, 508);
     			attr_dev(button, "id", "ButtonGraph");
-    			attr_dev(button, "class", "svelte-3vgab1");
-    			add_location(button, file$1, 11, 2, 424);
-    			add_location(main, file$1, 8, 0, 343);
+    			attr_dev(button, "class", "svelte-1ffw374");
+    			add_location(button, file$1, 11, 2, 580);
+    			add_location(main, file$1, 8, 0, 499);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, link, anchor);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div);
     			append_dev(div, h1);
-    			append_dev(h1, t0);
-    			append_dev(main, t1);
+    			append_dev(h1, t1);
+    			append_dev(main, t2);
     			append_dev(main, button);
 
     			if (!mounted) {
@@ -1211,11 +1253,13 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*predictedAnswer*/ 1) set_data_dev(t0, /*predictedAnswer*/ ctx[0]);
+    			if (dirty & /*predictedAnswer*/ 1) set_data_dev(t1, /*predictedAnswer*/ ctx[0]);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(link);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			mounted = false;
     			dispose();

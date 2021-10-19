@@ -29,8 +29,8 @@
   #colorfont{
     color: #FFFDFD;
     position: fixed;
-    top: 30px;
-    left:20px ;
+    left: 270px ;
+    top: 90px;
     text-align: center;
     z-index: 10;
   }
@@ -43,15 +43,16 @@ text-align: center;
 line-height: 10px;
 font-size: 20px;
 color: #FFFDFD;
-left: 1300px;
-top: 60px;
+left: 1160px;
+  top: 110px;
   }
   
   #pageG{
   position: fixed;
-  width: 1400px;
-  height: 670px;
-  top: 20px;
+  width: 1000px;
+  height: 600px;
+  left: 250px ;
+  top: 90px;
   background: #606060;
   box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
   }
@@ -61,8 +62,8 @@ top: 60px;
   position: fixed;
   width: 120px;
   height: 30px;
-  left: 1260px;
-  top: 50px;
+  left: 1120px;
+  top: 100px;
   background: #B1C319;
   border-radius: 20px 20px 20px 20px;
   }

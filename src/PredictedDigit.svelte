@@ -9,7 +9,7 @@
   }
   
 </script>
-
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Patrick+Hand&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <main>
   <div id="box">
   <h1 id="predictProduct">{predictedAnswer}</h1></div>
@@ -35,7 +35,7 @@ font-size: 25px;
  position: fixed;
  left: 70%;
  top: 40%;
- font-family: FC Daisy;
+ font-family: 'Patrick Hand', cursive;
  font-style: normal;
  font-weight: normal;
  font-size: 400%;
