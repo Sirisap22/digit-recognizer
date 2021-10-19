@@ -1,8 +1,9 @@
 <script lang="ts">
   import { predictionPercentage } from './store/stores.ts'
 </script>
-
-<main>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Patrick+Hand&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<main id="BGpage">
   <table class="graph" >
     <caption id="colorfont">Digit Probability Percentage</caption>
     <thead>
@@ -31,7 +32,9 @@
     position: fixed;
     left: 270px ;
     top: 90px;
+    font-size: 35px;
     text-align: center;
+    font-family: 'Bebas Neue', cursive;
     z-index: 10;
   }
 #font{
@@ -46,8 +49,7 @@ color: #FFFDFD;
 left: 1160px;
   top: 110px;
   }
-  
-  #pageG{
+  #BGpage{
   position: fixed;
   width: 1000px;
   height: 600px;
@@ -55,6 +57,14 @@ left: 1160px;
   top: 90px;
   background: #606060;
   box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
+  }
+  #pageG{
+  position: fixed;
+  width: 900px;
+  height: 400px;
+  left: 300px ;
+  top: 200px;
+  background: #606060;
   }
   #backButton{
   text-decoration: none;
@@ -75,6 +85,7 @@ left: 1160px;
   .graph caption {
     font: bold 150%/120% arial, helvetica, sans-serif;
     padding-bottom: 0.33em;
+    
   }
 
   .graph tbody th {
@@ -110,8 +121,8 @@ left: 1160px;
         border-bottom: 2px solid rgba(0, 0, 0, 0.5);
         background: repeating-linear-gradient(
           180deg,
-          rgba(170, 170, 170, 0.7) 0,
-          rgba(170, 170, 170, 0.7) 1px,
+          rgba(0, 0, 0, 0.7) 0,
+          rgba(0, 0, 0, 0.7) 1px,
           transparent 1px,
           transparent 20%
         );
@@ -123,7 +134,9 @@ left: 1160px;
         left: -3.2em;
         width: 2.8em;
         text-align: right;
-        font: bold 80%/120% arial, helvetica, sans-serif;
+        font: bold 100%/140% arial, helvetica, sans-serif;
+        font-family: 'Patrick Hand', cursive;
+        color: white;
       }
 
       .graph tbody:before {
@@ -154,10 +167,11 @@ left: 1160px;
       .graph tbody th {
         position: absolute;
         top: -3em;
-        left: 0;
+        left: -2em;
         width: 100%;
+        font-family: 'Patrick Hand', cursive;
+        color: white;
         font-weight: normal;
-        text-align: center;
         white-space: nowrap;
         text-indent: 0;
         /* transform:rotate(-45deg); */

@@ -943,7 +943,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (14:6) {#each Object.entries($predictionPercentage) as [number, percentage]}
+    // (15:6) {#each Object.entries($predictionPercentage) as [number, percentage]}
     function create_each_block(ctx) {
     	let tr;
     	let th;
@@ -967,15 +967,15 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(th, "scope", "row");
-    			attr_dev(th, "class", "svelte-1cpqrc5");
-    			add_location(th, file$2, 15, 10, 476);
-    			attr_dev(span, "class", "svelte-1cpqrc5");
-    			add_location(span, file$2, 17, 12, 533);
-    			attr_dev(td, "class", "svelte-1cpqrc5");
-    			add_location(td, file$2, 16, 10, 516);
+    			attr_dev(th, "class", "svelte-1v6i9fc");
+    			add_location(th, file$2, 16, 10, 740);
+    			attr_dev(span, "class", "svelte-1v6i9fc");
+    			add_location(span, file$2, 18, 12, 797);
+    			attr_dev(td, "class", "svelte-1v6i9fc");
+    			add_location(td, file$2, 17, 10, 780);
     			set_style(tr, "height", /*percentage*/ ctx[2] + "%");
-    			attr_dev(tr, "class", "svelte-1cpqrc5");
-    			add_location(tr, file$2, 14, 8, 432);
+    			attr_dev(tr, "class", "svelte-1v6i9fc");
+    			add_location(tr, file$2, 15, 8, 696);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -1004,7 +1004,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(14:6) {#each Object.entries($predictionPercentage) as [number, percentage]}",
+    		source: "(15:6) {#each Object.entries($predictionPercentage) as [number, percentage]}",
     		ctx
     	});
 
@@ -1012,18 +1012,22 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
+    	let link0;
+    	let t0;
+    	let link1;
+    	let t1;
     	let main;
     	let table;
     	let caption;
-    	let t1;
+    	let t3;
     	let thead;
     	let tr;
     	let th0;
-    	let t3;
-    	let th1;
     	let t5;
+    	let th1;
+    	let t7;
     	let tbody;
-    	let t6;
+    	let t8;
     	let button;
     	let a;
     	let h1;
@@ -1037,79 +1041,95 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			link0 = element("link");
+    			t0 = space();
+    			link1 = element("link");
+    			t1 = space();
     			main = element("main");
     			table = element("table");
     			caption = element("caption");
     			caption.textContent = "Digit Probability Percentage";
-    			t1 = space();
+    			t3 = space();
     			thead = element("thead");
     			tr = element("tr");
     			th0 = element("th");
     			th0.textContent = "Item";
-    			t3 = space();
+    			t5 = space();
     			th1 = element("th");
     			th1.textContent = "Percent";
-    			t5 = space();
+    			t7 = space();
     			tbody = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t6 = space();
+    			t8 = space();
     			button = element("button");
     			a = element("a");
     			h1 = element("h1");
     			h1.textContent = "Back";
+    			attr_dev(link0, "href", "https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Patrick+Hand&family=Playfair+Display:wght@900&display=swap");
+    			attr_dev(link0, "rel", "stylesheet");
+    			add_location(link0, file$2, 2, 0, 87);
+    			attr_dev(link1, "href", "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+    			attr_dev(link1, "rel", "stylesheet");
+    			add_location(link1, file$2, 3, 0, 244);
     			attr_dev(caption, "id", "colorfont");
-    			attr_dev(caption, "class", "svelte-1cpqrc5");
-    			add_location(caption, file$2, 5, 4, 124);
+    			attr_dev(caption, "class", "svelte-1v6i9fc");
+    			add_location(caption, file$2, 6, 4, 388);
     			attr_dev(th0, "scope", "col");
-    			attr_dev(th0, "class", "svelte-1cpqrc5");
-    			add_location(th0, file$2, 8, 8, 218);
+    			attr_dev(th0, "class", "svelte-1v6i9fc");
+    			add_location(th0, file$2, 9, 8, 482);
     			attr_dev(th1, "scope", "col");
-    			attr_dev(th1, "class", "svelte-1cpqrc5");
-    			add_location(th1, file$2, 9, 8, 252);
-    			attr_dev(tr, "class", "svelte-1cpqrc5");
-    			add_location(tr, file$2, 7, 6, 205);
-    			attr_dev(thead, "class", "svelte-1cpqrc5");
-    			add_location(thead, file$2, 6, 4, 191);
-    			attr_dev(tbody, "class", "horizontal svelte-1cpqrc5");
+    			attr_dev(th1, "class", "svelte-1v6i9fc");
+    			add_location(th1, file$2, 10, 8, 516);
+    			attr_dev(tr, "class", "svelte-1v6i9fc");
+    			add_location(tr, file$2, 8, 6, 469);
+    			attr_dev(thead, "class", "svelte-1v6i9fc");
+    			add_location(thead, file$2, 7, 4, 455);
+    			attr_dev(tbody, "class", "horizontal svelte-1v6i9fc");
     			attr_dev(tbody, "id", "pageG");
-    			add_location(tbody, file$2, 12, 4, 310);
-    			attr_dev(table, "class", "graph svelte-1cpqrc5");
-    			add_location(table, file$2, 4, 2, 97);
+    			add_location(tbody, file$2, 13, 4, 574);
+    			attr_dev(table, "class", "graph svelte-1v6i9fc");
+    			add_location(table, file$2, 5, 2, 361);
     			attr_dev(h1, "id", "font");
-    			attr_dev(h1, "class", "svelte-1cpqrc5");
-    			add_location(h1, file$2, 23, 59, 686);
+    			attr_dev(h1, "class", "svelte-1v6i9fc");
+    			add_location(h1, file$2, 24, 59, 950);
     			attr_dev(a, "href", "http://localhost:5000/");
-    			add_location(a, file$2, 23, 26, 653);
+    			add_location(a, file$2, 24, 26, 917);
     			attr_dev(button, "id", "backButton");
-    			attr_dev(button, "class", "svelte-1cpqrc5");
-    			add_location(button, file$2, 23, 2, 629);
-    			add_location(main, file$2, 3, 0, 88);
+    			attr_dev(button, "class", "svelte-1v6i9fc");
+    			add_location(button, file$2, 24, 2, 893);
+    			attr_dev(main, "id", "BGpage");
+    			attr_dev(main, "class", "svelte-1v6i9fc");
+    			add_location(main, file$2, 4, 0, 340);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, link0, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, link1, anchor);
+    			insert_dev(target, t1, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, table);
     			append_dev(table, caption);
-    			append_dev(table, t1);
+    			append_dev(table, t3);
     			append_dev(table, thead);
     			append_dev(thead, tr);
     			append_dev(tr, th0);
-    			append_dev(tr, t3);
+    			append_dev(tr, t5);
     			append_dev(tr, th1);
-    			append_dev(table, t5);
+    			append_dev(table, t7);
     			append_dev(table, tbody);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
 
-    			append_dev(main, t6);
+    			append_dev(main, t8);
     			append_dev(main, button);
     			append_dev(button, a);
     			append_dev(a, h1);
@@ -1142,6 +1162,10 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(link0);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(link1);
+    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(main);
     			destroy_each(each_blocks, detaching);
     		}
