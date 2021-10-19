@@ -194,13 +194,14 @@ left: 0;
 top: 0;
 left: 0;
 background: #B1C319;
+box-shadow: 3px 4px 0px 0px rgba(0,0,0,1);
 }
 #handWrite{
 text-align: center;
 position: relative;
-font-family: 'IM Fell English SC', serif;
-font-style: normal;
-font-weight: normal;
+font-family: 'Indie Flower', cursive;
+font-style:normal;
+font-weight: bold;
 line-height: 75px;
 text-align: center;
 color: #FFFFFF;
