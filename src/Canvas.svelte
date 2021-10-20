@@ -165,7 +165,7 @@
 <p id="predictionResult">Prediction Result</p>
 <p id="arrowbody"></p>
 <p id="triangle"></p>
-<p id="accuracy">{$predictionPercentage[predictedAnswer] ? `Accuracy: ${$predictionPercentage[predictedAnswer]}%`: ''}</p>
+<p id="accuracy">{$predictionPercentage[predictedAnswer] ? `Probability: ${$predictionPercentage[predictedAnswer]}%`: ''}</p>
 
 <canvas bind:this={canvas} width="500" height="400" id="canvasW"/>
 </div>
@@ -253,7 +253,7 @@ font-weight: bold;
 position:absolute;
 width: 800px;
 height: 60px;
-left: 45%;
+left: 45.55%;
 top: 250%;
 font-family: 'IM Fell English SC', serif;
 font-style: normal;
@@ -265,7 +265,7 @@ color: #FFFFFF;
 }
 #accuracy{
 position: absolute;
-left: 64.5%;
+left: 63.25%;
 top: 600%;
 font-display:inherit;
 font-family: 'Patrick Hand', cursive;
