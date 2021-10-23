@@ -218,8 +218,8 @@ color: #FFFFFF;
   border-radius: 20px 20px 20px 20px;
   color: #FFFDFD;
   font-size: 25px;
-  
   }
+  
 #ButtonClear{
 position: absolute;
 width: 200px;
