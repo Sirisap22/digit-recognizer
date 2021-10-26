@@ -40,5 +40,5 @@ def test_test_set(model):
 
 if __name__ == '__main__':
     # load model
-    model = pickle.load(open('../svm_digit_recognizer_proba.pkl', 'rb'))
+    model = pickle.load(open('../svm_digit_recognizer_proba_normalize_full.pkl', 'rb'))
     test_test_set(model)

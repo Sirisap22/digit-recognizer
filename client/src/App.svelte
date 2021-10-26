@@ -10,7 +10,7 @@
 </head>
 
 <main>
-	<Canvas/>
+	<Canvas id="homepage"/>
 	{#if $togglePredicted}
 		<PredictedDigit/>
 	{/if}

@@ -161,118 +161,118 @@
 </main>
 
 <style>
-#pagePrediction{
-position:fixed;
-left: 0;
-top: 0;
-right: 0;
-background: #606060;
-}
-#tabbar{
-position: absolute;
-width: 100%;
-height: 80px;
-left: 0;
-top: 0;
-left: 0;
-background: #B1C319;
-box-shadow: 3px 4px 0px 0px rgba(0,0,0,1);
-}
-#handWrite{
-text-align: center;
-position: relative;
-font-family: 'Indie Flower', cursive;
-font-style:normal;
-font-weight: bold;
-line-height: 75px;
-text-align: center;
-color: #FFFFFF;
-}
-#ButtonPredict
-{position: absolute;
-  width: 200px;
-  height: 80px;
-  left: 12%;
-  top: 750%;
-  background: #B1C319;
-  border-radius: 20px 20px 20px 20px;
-  color: #FFFDFD;
-  font-size: 25px;
+  #pagePrediction{
+    position:fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #606060;
   }
-  
-#ButtonClear{
-position: absolute;
-width: 200px;
-height: 80px;
-left: 28%;
-top:750%;
-background: #B1C319;
-border-radius: 20px 20px 20px 20px;
-color: #FFFDFD;
-font-size: 25px;
-}
-#canvasW{
-position: absolute;
-left:10%;
-top: 200%;
-}
-#writenum{
-position: absolute;
-left:16%;
-top: 130%;
-font-family: 'Indie Flower', cursive;
-font-style: normal;
-font-weight: normal;
-line-height: 95%;
-text-align: center;
-color: #FFFFFF;
-font-weight: bold;
-}
-#predictionResult{
-position:absolute;
-width: 800px;
-height: 60px;
-left: 45.55%;
-top: 250%;
-font-family: 'IM Fell English SC', serif;
-font-style: normal;
-font-weight: bold;
-font-size: 48px;
-line-height: 56px;
-text-align: center;
-color: #FFFFFF;
-}
-#accuracy{
-position: absolute;
-left: 63.25%;
-top: 600%;
-font-display:inherit;
-font-family: 'Patrick Hand', cursive;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 42px;
-text-align: center;
-color: #FFFFFF;
-}
-#arrowbody{
-position: absolute;
-width: 180px;
-height: 0px;
-left: 45%;
-top: 450%;
-border: 5px solid #FFFFFF;
-box-sizing: border-box;
-}
-#triangle {
-  position: absolute;
-  border-right: 10px solid #FFFFFF; 
-  border-bottom: 10px solid #FFFFFF;
-  height: 30px;
-  width: 30px;
-  transform: rotate(-45deg);
-  left: 55%;
-  top: 438%;
-}
+  #tabbar{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    left: 0;
+    background: #B1C319;
+    box-shadow: 3px 4px 0px 0px rgba(0,0,0,1);
+  }
+  #handWrite{
+    text-align: center;
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+    font-style:normal;
+    font-weight: bold;
+    line-height: 75px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #ButtonPredict{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 12%;
+    top: 750%;
+    background: #B1C319;
+    border-radius: 20px 20px 20px 20px;
+    color: #FFFDFD;
+    font-size: 25px;
+  }
+    
+  #ButtonClear{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 28%;
+    top:750%;
+    background: #B1C319;
+    border-radius: 20px 20px 20px 20px;
+    color: #FFFDFD;
+    font-size: 25px;
+  }
+  #canvasW{
+    position: absolute;
+    left:10%;
+    top: 200%;
+  }
+  #writenum{
+    position: absolute;
+    left:16%;
+    top: 130%;
+    font-family: 'Indie Flower', cursive;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 95%;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  #predictionResult{
+    position:absolute;
+    width: 800px;
+    height: 60px;
+    left: 45.55%;
+    top: 250%;
+    font-family: 'IM Fell English SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #accuracy{
+    position: absolute;
+    left: 63.25%;
+    top: 600%;
+    font-display:inherit;
+    font-family: 'Patrick Hand', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #arrowbody{
+    position: absolute;
+    width: 180px;
+    height: 0px;
+    left: 45%;
+    top: 450%;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+  #triangle {
+    position: absolute;
+    border-right: 10px solid #FFFFFF; 
+    border-bottom: 10px solid #FFFFFF;
+    height: 30px;
+    width: 30px;
+    transform: rotate(-45deg);
+    left: 55%;
+    top: 438%;
+  }
 </style>
 

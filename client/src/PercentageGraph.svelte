@@ -40,45 +40,45 @@
     font-family: 'Bebas Neue', cursive;
     z-index: 10;
   }
-#font{
-position: fixed;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-text-align: center;
-line-height: 10px;
-font-size: 20px;
-color: #FFFDFD;
-left: 1160px;
-  top: 110px;
+  #font{
+    position: fixed;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    color: #FFFDFD;
+    left: 1160px;
+      top: 110px;
   }
   #BGpage{
-  position: fixed;
-  width: 1000px;
-  height: 600px;
-  left: 250px ;
-  top: 90px;
-  background: #606060;
-  box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
+    position: fixed;
+    width: 1000px;
+    height: 600px;
+    left: 250px ;
+    top: 90px;
+    background: #606060;
+    box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
   }
   #pageG{
-  position: fixed;
-  width: 900px;
-  height: 400px;
-  left: 300px ;
-  top: 200px;
-  background: #606060;
+    position: fixed;
+    width: 900px;
+    height: 400px;
+    left: 300px ;
+    top: 200px;
+    background: #606060;
   }
   #backButton{
-  text-decoration: none;
-  display: inline-block;
-  position: fixed;
-  width: 120px;
-  height: 30px;
-  left: 1120px;
-  top: 100px;
-  background: #B1C319;
-  border-radius: 20px 20px 20px 20px;
+    text-decoration: none;
+    display: inline-block;
+    position: fixed;
+    width: 120px;
+    height: 30px;
+    left: 1120px;
+    top: 100px;
+    background: #B1C319;
+    border-radius: 20px 20px 20px 20px;
   }
   .graph {
     margin-bottom: 1em;

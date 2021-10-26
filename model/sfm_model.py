@@ -7,9 +7,6 @@ import seaborn as sns
 #%matplotlib inline
 sns.set_style("whitegrid")
 
-import os
-print(os.listdir("D:/work/3DS1/Linear/DigiReg/kaggle/input/digit-recognizer"))
-
 import warnings
 warnings.filterwarnings("ignore")
 
