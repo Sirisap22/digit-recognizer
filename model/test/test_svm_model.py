@@ -36,7 +36,7 @@ def test_test_set(model):
 
     # not normalize 0.97360 No. 939th
     # normalize 0.97360 - No. 939th
-    # full normalize 0.97521 - No.901th
+    # full normalize 0.97521 - No.901st
 
 if __name__ == '__main__':
     # load model
