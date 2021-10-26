@@ -23,7 +23,7 @@ app.add_middleware(
 
 @app.post('/model_v1/predict')
 async def predict(file: UploadFile = File(...)):
-    prediction = svm_service.predict(file)
+    prediction = svm_service.predict_svm(file)
     json_pred = json.dumps(prediction)
     return json_pred
 

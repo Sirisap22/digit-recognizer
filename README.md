@@ -1,7 +1,7 @@
 Start API
 ```
 cd api
-pip install fastapi uvicorn pickle numpy Pillow
+pip install fastapi numpy Pillow
 python main.py
 ```
 
