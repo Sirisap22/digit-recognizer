@@ -2,7 +2,7 @@
 	import Canvas from './Canvas.svelte';
 	import PercentageGraph from './PercentageGraph.svelte';
 	import PredictedDigit from './PredictedDigit.svelte';
-	import { predictionPercentage, toggleGraph, togglePredicted } from './store/stores.ts';
+	import { toggleGraph, togglePredicted } from './store/stores.ts';
 </script>
 
 <head>

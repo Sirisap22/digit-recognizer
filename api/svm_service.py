@@ -11,7 +11,7 @@ def predict_svm(file: UploadFile):
     image = image / 255.
 
     # load model
-    model = pickle.load(open('../model/svm_digit_recognizer_proba_normalize_full.pkl', 'rb'))
+    model = pickle.load(open('../model/svm/svm_digit_recognizer_proba_normalize_full.pkl', 'rb'))
 
     result_pro = model.predict_proba(image)
     percentage = np.vectorize(lambda x: x*100)
@@ -22,3 +22,8 @@ def predict_svm(file: UploadFile):
         prediction[i] = f'{percent_result[i]:.2f}'
 
     return prediction
+
+
+    
+
+    

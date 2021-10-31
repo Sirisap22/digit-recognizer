@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { predictionPercentage, toggleGraph, togglePredicted } from './store/stores.ts'
+  import ModelSelector from './ModelSelector.svelte';
+  import { predictionPercentage, toggleGraph, togglePredicted, selectedModel } from './store/stores.ts'
   $: predictedAnswer = Object.keys($predictionPercentage).reduce((a, b) => $predictionPercentage[a] > $predictionPercentage[b] ? a : b, {});
   let canvas
   let clearBtn
@@ -114,7 +115,7 @@
       canvas.toBlob(function (blob) {
         const formData = new FormData()
         formData.append('file', blob)
-        const res = fetch('http://127.0.0.1:8000/model_v1/predict', {
+        const res = fetch('http://127.0.0.1:8000/model_v1/predict/' + $selectedModel, {
           method: 'POST',
           body: formData,
         })
@@ -153,6 +154,7 @@
 <canvas bind:this={canvas} width="500" height="400" id="canvasW"/>
 </div>
 <div > 
+  <ModelSelector/>
   <button bind:this={clearBtn} id="ButtonClear">Clear</button>
   <button bind:this={predictBtn} id="ButtonPredict">Predict</button>
 </div>
