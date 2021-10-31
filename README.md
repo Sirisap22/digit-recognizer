@@ -1,7 +1,7 @@
 Start API
 ```
 cd api
-pip install fastapi numpy Pillow
+pip install fastapi numpy Pillow tensorflow pandas
 python main.py
 ```
 
