@@ -1,5 +1,8 @@
 <script lang="ts">
-  import { predictionPercentage } from './store/stores.ts'
+  import { predictionPercentage, toggleGraph } from './store/stores.ts'
+  function onBackBtn() {
+    toggleGraph.update(value => !value)
+  }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Patrick+Hand&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -23,7 +26,7 @@
       {/each}
     </tbody>
   </table>
-  <button id="backButton"><a href="http://localhost:5000/"><h1 id="font">Back</h1></a></button>
+  <button on:click={onBackBtn} id="backButton"><h1 id="font">Back</h1></button>
 </main>
 
 <style>
@@ -37,61 +40,58 @@
     font-family: 'Bebas Neue', cursive;
     z-index: 10;
   }
-#font{
-position: fixed;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-text-align: center;
-line-height: 10px;
-font-size: 20px;
-color: #FFFDFD;
-left: 1160px;
-  top: 110px;
+  #font{
+    position: fixed;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    color: #FFFDFD;
+    left: 1160px;
+      top: 110px;
   }
   #BGpage{
-  position: fixed;
-  width: 1000px;
-  height: 600px;
-  left: 250px ;
-  top: 90px;
-  background: #606060;
-  box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
+    position: fixed;
+    width: 1000px;
+    height: 600px;
+    left: 250px ;
+    top: 90px;
+    background: #606060;
+    box-shadow: 7px 5px 7px 3px rgba(0, 0, 0, 0.79),-7px -5px 7px 3px rgba(0, 0, 0, 0.79);;
   }
   #pageG{
-  position: fixed;
-  width: 900px;
-  height: 400px;
-  left: 300px ;
-  top: 200px;
-  background: #606060;
+    position: fixed;
+    width: 900px;
+    height: 400px;
+    left: 300px ;
+    top: 200px;
+    background: #606060;
   }
   #backButton{
-  text-decoration: none;
-  display: inline-block;
-  position: fixed;
-  width: 120px;
-  height: 30px;
-  left: 1120px;
-  top: 100px;
-  background: #B1C319;
-  border-radius: 20px 20px 20px 20px;
+    text-decoration: none;
+    display: inline-block;
+    position: fixed;
+    width: 120px;
+    height: 30px;
+    left: 1120px;
+    top: 100px;
+    background: #B1C319;
+    border-radius: 20px 20px 20px 20px;
   }
   .graph {
     margin-bottom: 1em;
     font: normal 100%/150% arial, helvetica, sans-serif;
   }
-
   .graph caption {
     font: bold 150%/120% arial, helvetica, sans-serif;
     padding-bottom: 0.33em;
     
   }
-
   .graph tbody th {
     text-align: right;
   }
-
   @supports (display: grid) {
     @media (min-width: 32em) {
       .graph {
@@ -99,15 +99,12 @@ left: 1160px;
         width: 600px;
         height: 300px;
       }
-
       .graph caption {
         display: block;
       }
-
       .graph thead {
         display: none;
       }
-
       .graph tbody {
         
         position: relative;
@@ -127,7 +124,6 @@ left: 1160px;
           transparent 20%
         );
       }
-
       .graph tbody:before,
       .graph tbody:after {
         position: absolute;
@@ -138,32 +134,26 @@ left: 1160px;
         font-family: 'Patrick Hand', cursive;
         color: white;
       }
-
       .graph tbody:before {
         content: '100%';
         top: -0.6em;
       }
-
       .graph tbody:after {
         content: '0%';
         bottom: -0.6em;
       }
-
       .graph tr {
         position: relative;
         display: block;
       }
-
       .graph tr:hover {
         z-index: 999;
       }
-
       .graph th,
       .graph td {
         display: block;
         text-align: center;
       }
-
       .graph tbody th {
         position: absolute;
         top: -3em;
@@ -176,11 +166,9 @@ left: 1160px;
         text-indent: 0;
         /* transform:rotate(-45deg); */
       }
-
       .graph tbody th:after {
         content: '';
       }
-
       .graph td {
         width: 100%;
         height: 100%;
@@ -188,11 +176,9 @@ left: 1160px;
         border-radius: 0.5em 0.5em 0 0;
         transition: background 0.5s;
       }
-
       .graph tr:hover td {
         opacity: 0.7;
       }
-
       .graph td span {
         overflow: hidden;
         position: absolute;
@@ -209,7 +195,6 @@ left: 1160px;
         transition: opacity 0.5s;
         color: white;
       }
-
       .toggleGraph:checked + table td span,
       .graph tr:hover td span {
         width: 4em;
@@ -219,5 +204,3 @@ left: 1160px;
     } /* min-width:32em */
   } /* grid only */
 </style>
-
-

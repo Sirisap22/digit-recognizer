@@ -1,9 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { predictionPercentage, toggleGraph, togglePredicted } from './store/stores.ts'
-
+  import ModelSelector from './ModelSelector.svelte';
+  import { predictionPercentage, toggleGraph, togglePredicted, selectedModel } from './store/stores.ts'
   $: predictedAnswer = Object.keys($predictionPercentage).reduce((a, b) => $predictionPercentage[a] > $predictionPercentage[b] ? a : b, {});
-
   let canvas
   let clearBtn
   let predictBtn
@@ -13,21 +12,16 @@
   let prevY = 0
   let currY = 0
   let dot_flag = false
-
   let x = 'white'
   let y = 30
-
   onMount(() => {
     const ctx = canvas.getContext('2d')
     const width = ctx.canvas.clientWidth
     const height = ctx.canvas.clientHeight
-
     ctx.fillStyle = 'black'
     ctx.fillRect(0, 0, width, height)
-
     ctx.fillStyle = 'white'
     ctx.lineCap = 'round'
-
     canvas.addEventListener(
       'mousemove',
       function (e) {
@@ -56,7 +50,6 @@
       },
       false,
     )
-
     function draw() {
       ctx.beginPath()
       ctx.moveTo(prevX, prevY)
@@ -66,14 +59,12 @@
       ctx.stroke()
       ctx.closePath()
     }
-
     function findxy(res, e) {
       if (res == 'down') {
         prevX = currX
         prevY = currY
         currX = e.clientX - canvas.offsetLeft
         currY = e.clientY - canvas.offsetTop
-
         flag = true
         dot_flag = true
         if (dot_flag) {
@@ -97,7 +88,6 @@
         }
       }
     }
-
     clearBtn.addEventListener(
       'click',
       function (e) {
@@ -105,18 +95,15 @@
       },
       false,
     )
-
     function erase() {
       ctx.clearRect(0, 0, width, height)
       ctx.fillStyle = 'black'
       ctx.fillRect(0, 0, width, height)
       ctx.fillStyle = 'white'
-
       predictionPercentage.set({})
       toggleGraph.set(false)
       togglePredicted.set(false)
     }
-
     predictBtn.addEventListener(
       'click',
       function (e) {
@@ -124,13 +111,11 @@
       },
       false,
     )
-
     function predict() {
       canvas.toBlob(function (blob) {
         const formData = new FormData()
         formData.append('file', blob)
-
-        const res = fetch('http://127.0.0.1:8000/model_v1/predict', {
+        const res = fetch('http://127.0.0.1:8000/model_v1/predict/' + $selectedModel, {
           method: 'POST',
           body: formData,
         })
@@ -144,7 +129,6 @@
                 predictions[key] = parseFloat(predictions[key])
               }
             }
-
             predictionPercentage.update((value) => predictions)
             togglePredicted.set(true)
           })
@@ -170,6 +154,7 @@
 <canvas bind:this={canvas} width="500" height="400" id="canvasW"/>
 </div>
 <div > 
+  <ModelSelector/>
   <button bind:this={clearBtn} id="ButtonClear">Clear</button>
   <button bind:this={predictBtn} id="ButtonPredict">Predict</button>
 </div>
@@ -178,124 +163,118 @@
 </main>
 
 <style>
-
-#pagePrediction{
-position:fixed;
-left: 0;
-top: 0;
-right: 0;
-background: #606060;
-}
-#tabbar{
-position: absolute;
-width: 100%;
-height: 80px;
-left: 0;
-top: 0;
-left: 0;
-background: #B1C319;
-box-shadow: 3px 4px 0px 0px rgba(0,0,0,1);
-}
-#handWrite{
-text-align: center;
-position: relative;
-font-family: 'Indie Flower', cursive;
-font-style:normal;
-font-weight: bold;
-line-height: 75px;
-text-align: center;
-color: #FFFFFF;
-
-
-}
-#ButtonPredict
-{position: absolute;
-  width: 200px;
-  height: 80px;
-  left: 12%;
-  top: 750%;
-  background: #B1C319;
-  border-radius: 20px 20px 20px 20px;
-  color: #FFFDFD;
-  font-size: 25px;
+  #pagePrediction{
+    position:fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #606060;
   }
-  
-#ButtonClear{
-position: absolute;
-width: 200px;
-height: 80px;
-left: 28%;
-top:750%;
-background: #B1C319;
-border-radius: 20px 20px 20px 20px;
-color: #FFFDFD;
-font-size: 25px;
-}
-#canvasW{
-position: absolute;
-left:10%;
-top: 200%;
-}
-#writenum{
-position: absolute;
-left:16%;
-top: 130%;
-font-family: 'Indie Flower', cursive;
-font-style: normal;
-font-weight: normal;
-line-height: 95%;
-text-align: center;
-color: #FFFFFF;
-font-weight: bold;
-}
-
-#predictionResult{
-position:absolute;
-width: 800px;
-height: 60px;
-left: 45.55%;
-top: 250%;
-font-family: 'IM Fell English SC', serif;
-font-style: normal;
-font-weight: bold;
-font-size: 48px;
-line-height: 56px;
-text-align: center;
-color: #FFFFFF;
-}
-#accuracy{
-position: absolute;
-left: 63.25%;
-top: 600%;
-font-display:inherit;
-font-family: 'Patrick Hand', cursive;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 42px;
-text-align: center;
-color: #FFFFFF;
-}
-#arrowbody{
-position: absolute;
-width: 180px;
-height: 0px;
-left: 45%;
-top: 450%;
-border: 5px solid #FFFFFF;
-box-sizing: border-box;
-}
-#triangle {
-  position: absolute;
-  border-right: 10px solid #FFFFFF; 
-  border-bottom: 10px solid #FFFFFF;
-  height: 30px;
-  width: 30px;
-  transform: rotate(-45deg);
-  left: 55%;
-  top: 438%;
-
-}
+  #tabbar{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    left: 0;
+    background: #B1C319;
+    box-shadow: 3px 4px 0px 0px rgba(0,0,0,1);
+  }
+  #handWrite{
+    text-align: center;
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+    font-style:normal;
+    font-weight: bold;
+    line-height: 75px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #ButtonPredict{
+    position: fixed;
+    width: 200px;
+    height: 80px;
+    left: 12%;
+    top: 80%;
+    background: #B1C319;
+    border-radius: 20px 20px 20px 20px;
+    color: #FFFDFD;
+    font-size: 25px;
+  }
+    
+  #ButtonClear{
+    position: fixed;
+    width: 200px;
+    height: 80px;
+    left: 27%;
+    top:80%;
+    background: #B1C319;
+    border-radius: 20px 20px 20px 20px;
+    color: #FFFDFD;
+    font-size: 25px;
+  }
+  #canvasW{
+    position: fixed;
+    left:10%;
+    top: 20%;
+  }
+  #writenum{
+    position: fixed;
+    left:16%;
+    top: 13%;
+    font-family: 'Indie Flower', cursive;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 95%;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  #predictionResult{
+    position:fixed;
+    width: 800px;
+    height: 60px;
+    left: 46%;
+    top: 25%;
+    font-family: 'IM Fell English SC', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #accuracy{
+    position: fixed;
+    left: 63.25%;
+    top: 60%;
+    font-display:inherit;
+    font-family: 'Patrick Hand', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #arrowbody{
+    position: fixed;
+    width: 13%;
+    height: 0px;
+    left: 45%;
+    top: 45%;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+  #triangle {
+    position: fixed;
+    border-right: 10px solid #FFFFFF; 
+    border-bottom: 10px solid #FFFFFF;
+    height: 30px;
+    width: 30px;
+    transform: rotate(-45deg);
+    left: 56%;
+    top: 43.8%;
+  }
 </style>
-
 
