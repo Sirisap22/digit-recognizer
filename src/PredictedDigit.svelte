@@ -22,7 +22,7 @@
     position: fixed;
     width: 200px;
     height: 80px;
-    left: 65%;
+    left: 70%;
     top: 75%;
     background: #B1C319;
     border-radius: 20px 20px 20px 20px;
@@ -31,7 +31,7 @@
   }
   #predictProduct{
     position: fixed;
-    left: 70%;
+    left: 75%;
     top: 40%;
     font-family: 'Patrick Hand', cursive;
     font-style: normal;
