@@ -211,7 +211,7 @@
     position: fixed;
     width: 200px;
     height: 80px;
-    left: 27%;
+    left: 30%;
     top:80%;
     background: #B1C319;
     border-radius: 20px 20px 20px 20px;
@@ -222,11 +222,14 @@
     position: fixed;
     left:10%;
     top: 20%;
+    width:35%;
+    height:60%;
+    padding: 1%;
   }
   #writenum{
     position: fixed;
     left:16%;
-    top: 13%;
+    top: 15%;
     font-family: 'Indie Flower', cursive;
     font-style: normal;
     font-weight: normal;
