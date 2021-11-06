@@ -270,7 +270,7 @@
     position: fixed;
     width: 12.5%;
     height: 0px;
-    left: 45%;
+    left: 47%;
     top: 45%;
     border: 5px solid #FFFFFF;
     box-sizing: border-box;
@@ -282,7 +282,7 @@
     height: 30px;
     width: 30px;
     transform: rotate(-45deg);
-    left: 56%;
+    left: 58%;
     top: 43.8%;
   }
 </style>

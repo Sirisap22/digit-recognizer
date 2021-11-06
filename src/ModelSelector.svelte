@@ -30,7 +30,7 @@
     position: fixed;
     width: 180px;
     height: 0px;
-    left: 45%;
+    left: 47%;
     top: 50%;
 
   }
