@@ -228,7 +228,7 @@
   }
   #writenum{
     position: fixed;
-    left:16%;
+    left:17.5%;
     top: 15%;
     font-family: 'Indie Flower', cursive;
     font-style: normal;
