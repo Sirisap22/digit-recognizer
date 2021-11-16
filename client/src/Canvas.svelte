@@ -6,6 +6,8 @@
     togglePredicted,
     selectedModel,
   } from './store/stores.ts'
+
+
   $: predictedAnswer = Object.keys($predictionPercentage).reduce(
     (a, b) => ($predictionPercentage[a] > $predictionPercentage[b] ? a : b),
     {},
@@ -22,6 +24,8 @@
   let x = 'white'
   let y = 30
   onMount(() => {
+
+
     const ctx = canvas.getContext('2d')
     const width = ctx.canvas.clientWidth
     const height = ctx.canvas.clientHeight
@@ -123,7 +127,7 @@
         const formData = new FormData()
         formData.append('file', blob)
         const res = fetch(
-          'http://127.0.0.1:8000/model_v1/predict/' + $selectedModel,
+          `${API_DOMAIN}/model_v1/predict/` + $selectedModel,
           {
             method: 'POST',
             body: formData,
@@ -177,7 +181,6 @@
 
 <main>
   <div>
-
     <canvas bind:this={canvas} width="500" height="400" id="canvasW" />
   </div>
   <div class="btn-canvas">

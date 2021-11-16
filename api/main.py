@@ -4,14 +4,18 @@ import svm_service
 import sfm_service
 import json
 import uvicorn
+from dotenv import load_dotenv
+import os
 
-HOST = '127.0.0.1'
-PORT = '8000'
+load_dotenv()
+
+HOST = os.getenv('HOST')
+PORT = os.getenv('PORT')
+ORIGIN = os.getenv('ORIGIN')
 
 app = FastAPI()
 origins = [
-    "http://localhost",
-    "http://localhost:5000",
+    ORIGIN
 ]
 
 app.add_middleware(

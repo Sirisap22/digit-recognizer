@@ -7,19 +7,8 @@
   ]
   function onSelectModel() {
     selectedModel.set(selected.endpoint)
-    // console.log($selectedModel)
   }
 </script>
-
-<style>
-  /* #select {
-    position: fixed;
-    width: 180px;
-    height: 0px;
-    left: 47%;
-    top: 50%;
-  } */
-</style>
 
 <main>
   <div>
