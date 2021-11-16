@@ -145,7 +145,7 @@
 <div id="tabbar">
 <div>
 <h1 id="handWrite">Handwritten Digit Recognition Web App</h1>
-<div id="makemid">
+
 <h1><p id="writenum">Write your number!</p></h1>
 <p id="predictionResult">Prediction Result</p>
 <p id="arrowbody"></p>
@@ -159,15 +159,12 @@
   <button bind:this={clearBtn} id="ButtonClear">Clear</button>
   <button bind:this={predictBtn} id="ButtonPredict">Predict</button>
 </div></div>
-</div>
+
 </body>
 </main>
 
 <style>
-  #makemid{
-    padding: 1000px;
-    border: red 10px;
-  }
+
   #pagePrediction{
     position:fixed;
     left: 0;
@@ -220,10 +217,8 @@
   }
   #canvasW{
     position: fixed;
-    left:10%;
+    left:12%;
     top: 20%;
-    width:35%;
-    height:60%;
     padding: 1%;
   }
   #writenum{
@@ -243,7 +238,7 @@
     width: 800px;
     height: 60px;
     
-    left: 51%;
+    left: 52%;
     top: 25%;
     font-family: 'IM Fell English SC', serif;
     font-style: normal;
