@@ -196,7 +196,7 @@
     position: fixed;
     width: 200px;
     height: 80px;
-    left: 12%;
+    left: 15%;
     top: 80%;
     background: #B1C319;
     border-radius: 20px 20px 20px 20px;
